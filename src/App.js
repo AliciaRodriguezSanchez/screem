@@ -13,16 +13,25 @@ import Player from './components/Player';
 import Epg from './containers/epgContainer';
 import Placard from './components/Placard';
 import defaultTheme from './constants/theme';
-import { ThemeProvider } from 'react-jss';
-
-function App() {
-
-  const memoTheme = useMemo(()=> (
-    defaultTheme
-  ),[]);
+import { ThemeProvider as ThemeJss} from 'react-jss';
+import deepMerge from './utils/deep-merge';
+const ThemeProvider = ({ theme = {}, ...restProps }) => {
+  
+  const memoTheme = useMemo(
+    () => deepMerge(defaultTheme, theme), 
+    [theme]);
 
   return (
-    <ThemeProvider theme={memoTheme}>
+    <ThemeJss 
+      theme={memoTheme} 
+      {...restProps} 
+    />
+  );
+};
+
+function App() {
+  return (
+    <ThemeProvider>
       <div className='App'>
         <BrowserRouter>
           <Header/>

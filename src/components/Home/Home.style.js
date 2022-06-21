@@ -28,6 +28,6 @@ export default createUseStyles((theme) => ({
         paddingBottom:'10px',
     },
     images:{
-      height:'100px',
+      height:'120px',
     }
   }));

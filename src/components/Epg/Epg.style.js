@@ -187,7 +187,6 @@ export default createUseStyles((theme) => ({
         
     },
     scroll:{
-        display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         position: 'relative',

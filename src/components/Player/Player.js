@@ -2,6 +2,8 @@ import React, { useCallback, useRef, useState } from 'react';
 import useStyles from './Player.style';
 import {FaPlay, FaRegStopCircle} from "react-icons/fa";
 
+import clsx from 'clsx';
+
 function Player({...restProps}){
 
     const [activePlay, setActivePlay]=useState(true);
@@ -16,7 +18,7 @@ function Player({...restProps}){
 
     return (
         <div className={classes.root}>
-            <div className={classes.actions}>
+            <div className={activePlay? classes.actions : clsx(classes.actions,classes.transitionIcon)}>
                 <div onClick={handleOnClick}>{activePlay ? (<FaPlay className={classes.icon}/>) : (<FaRegStopCircle className={classes.icon} />)}</div>
             </div>
             <video id="samp" ref={videoRef}>
@@ -26,4 +28,5 @@ function Player({...restProps}){
      
     )
 }
+
 export default Player;

@@ -1,4 +1,5 @@
 import React, {useMemo} from 'react';
+import PropTypes from 'prop-types';
 import { FaHouseUser,FaBars,FaUndo,FaVideo } from "react-icons/fa";
 import useStyles from './Footer.style';
 import { Link, useLocation} from "react-router-dom";
@@ -69,4 +70,12 @@ function Footer ({}){
         </div>
     )
 }
+Footer.propTypes = {
+    icon: PropTypes.object,
+    isActive: PropTypes.bool,
+};
+Footer.defaultProps = {
+    icon: {},
+    isActive: false,
+};
 export default Footer;

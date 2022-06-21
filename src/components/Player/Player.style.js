@@ -16,11 +16,13 @@ export default createUseStyles((theme) => ({
             height:'auto',
         }
     },
+    
     actions:{
       position:'absolute',
       color: 'white',
       display: 'flex',
-      left: '20px',
+      transform: 'translate(0,0)',
+      transition:'0.3s',
       zIndex:2,
       '& button':{
         backgroundColor: 'transparent',
@@ -37,6 +39,10 @@ export default createUseStyles((theme) => ({
       },
 
     
+    },
+    transitionIcon:{
+        transform: 'translate(40vw,35vh)',
+        transition:'0.3s',
     },
     icon:{
         width: '30px',

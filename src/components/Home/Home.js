@@ -12,7 +12,7 @@ function Home ({...restProps}){
                         <h1 className={classes.h1}>Alicia Rodríguez Sánchez</h1>
                     </div>
                     <div>
-                        <h2 className={classes.h2}>Prueba Técnica </h2>
+                        <h2 className={classes.h2}>Technical Test </h2>
                     </div>
                     <div>
                         <img className={classes.images} src={pathName} alt="happiness"/>

@@ -11,7 +11,7 @@ function EpgContainer ({listTv,getListDataTV}){
     useEffect(() => {
         getListDataTV();
     },[getListDataTV]);
-    
+
     return (
         <Epg listTv={listTv}/>
     )

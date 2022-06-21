@@ -28,7 +28,7 @@ export const getlLoadListDataTV = () => (dispatch) => {
         return Promise.resolve(data);
     })
     .catch((error) => {
-        dispatch(getlLoadListDataTVFailed(error));
+        dispatch(getlLoadListDataTVSuccess(error));
         return Promise.resolve(error);
     });
 };
